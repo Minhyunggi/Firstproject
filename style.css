@@ -1,0 +1,26 @@
+body {
+  background-color: beige;
+  height: 1000vh;
+  margin: 100px 0px;
+}
+.sub-box {
+  margin: 0 70px;
+}
+.sub-box h1 {
+  text-align: center;
+  font-size: 25px;
+}
+.sub-box p {
+  text-align: center;
+}
+.card-box {
+  background-color: aqua;
+  position: sticky;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.card-box p {
+  display: flex;
+  flex-direction: column;
+}
