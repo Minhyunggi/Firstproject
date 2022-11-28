@@ -16,6 +16,10 @@ window.addEventListener("scroll", function () {
     if (this.scrollY == i + "000") {
       console.log(i + "000");
       cardBox[i - 1].style.opacity = "0";
+    } else if (this.scrollY >= 4000) {
+      document.querySelector(".body").style.backgroundColor = "black";
+    } else if (this.scrollY <= 4000) {
+      document.querySelector(".body").style.backgroundColor = "white";
     }
   }
 });
