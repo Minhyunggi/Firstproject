@@ -14,13 +14,14 @@ body {
   text-align: center;
 }
 .card-box {
-  background-color: aqua;
   position: sticky;
   top: 100px;
   display: flex;
   justify-content: center;
+  margin-bottom: 500px;
 }
-.card-box p {
-  display: flex;
-  flex-direction: column;
+.card-box img {
+  display: block;
+  width: 50%;
+  border-radius: 10px;
 }
