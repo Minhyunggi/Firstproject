@@ -13,7 +13,7 @@ let cardBox = document.querySelectorAll(".card-box");
 
 window.addEventListener("scroll", function () {
   for (i = 0; i < cardBoxLength; i++) {
-    if (this.scrollY == i + "000") {
+    if (Math.floor(this.scrollY / 100) * 100 == i + "000") {
       console.log(i + "000");
       cardBox[i - 1].style.opacity = "0";
     } else if (this.scrollY >= 4000) {
