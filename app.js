@@ -13,13 +13,13 @@ let cardBox = document.querySelectorAll(".card-box");
 
 window.addEventListener("scroll", function () {
   for (i = 0; i < cardBoxLength; i++) {
-    if (Math.floor(this.scrollY / 100) * 100 == i + "000") {
+    if (Math.floor(this.scrollY / 100) * 100 == i + "000" - 200) {
       console.log(i + "000");
-      cardBox[i - 1].style.opacity = "0";
+      cardBox[i - 1].classList.add("hidden");
     } else if (this.scrollY >= 4000) {
-      document.querySelector(".body").style.backgroundColor = "black";
+      document.querySelector(".body").classList.add("black");
     } else if (this.scrollY <= 4000) {
-      document.querySelector(".body").style.backgroundColor = "white";
+      document.querySelector(".body").classList.remove("black");
     }
   }
 });

@@ -1,8 +1,13 @@
-body {
+.body {
   background-color: white;
   height: 1000vh;
   margin: 100px 0px;
+  transition: all 1s;
 }
+.black {
+  background-color: black;
+}
+
 .sub-box {
   margin: 0 70px;
 }
@@ -19,23 +24,45 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 500px;
-  position: relative;
+  opacity: 1;
+  transition: all 1s;
+}
+.hidden {
+  opacity: 0;
 }
 .card-box img {
   display: block;
-  width: 50%;
+  width: 60%;
   border-radius: 10px;
 }
 .card-box-comment {
-  background-color: aqua;
+  background-color: white;
   width: 30%;
-  height: 20%;
+  height: 40%;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
   justify-content: center;
   align-items: center;
   display: flex;
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 15px;
+}
+.end-text {
+  color: white;
+  width: 45%;
+  padding: 0px 7px;
+}
+.end-text2 {
+  color: white;
+  width: 45%;
+  padding: 0px 7px;
+}
+.end-text-box {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
 }
