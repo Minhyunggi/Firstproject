@@ -13,7 +13,7 @@ let cardBox = document.querySelectorAll(".card-box");
 
 window.addEventListener("scroll", function () {
   for (i = 0; i < cardBoxLength; i++) {
-    if (Math.floor(this.scrollY / 100) * 100 == i + "000" - 200) {
+    if (Math.floor(this.scrollY / 100) * 100 == i + "000" - 300) {
       console.log(i + "000");
       cardBox[i - 1].classList.add("hidden");
     } else if (this.scrollY >= 4000) {
@@ -22,4 +22,14 @@ window.addEventListener("scroll", function () {
       document.querySelector(".body").classList.remove("black");
     }
   }
+});
+window.addEventListener("scroll", function () {
+  console.log(Math.floor(this.scrollY / 100) * 100);
+  for (i = cardBox.length; i > 0; i--)
+    if (
+      cardBox[i - 1].classList.contains("hidden") &&
+      Math.floor(this.scrollY / 100) * 100 == i + "000" - 400
+    ) {
+      cardBox[i - 1].classList.remove("hidden");
+    }
 });
