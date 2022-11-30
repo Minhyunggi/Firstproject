@@ -13,8 +13,8 @@ let cardBox = document.querySelectorAll(".card-box");
 
 window.addEventListener("scroll", function () {
   for (i = 0; i < cardBoxLength; i++) {
-    if (Math.floor(this.scrollY / 100) * 100 == i + "000" - 300) {
-      console.log(i + "000");
+    if (Math.floor(this.scrollY / 100) * 100 == `${[i]}000` - `${[i]}00`) {
+      console.log(i - 1 + "히든");
       cardBox[i - 1].classList.add("hidden");
     } else if (this.scrollY >= 4000) {
       document.querySelector(".body").classList.add("black");
@@ -28,8 +28,11 @@ window.addEventListener("scroll", function () {
   for (i = cardBox.length; i > 0; i--)
     if (
       cardBox[i - 1].classList.contains("hidden") &&
-      Math.floor(this.scrollY / 100) * 100 == i + "000" - 400
+      Math.floor(this.scrollY / 100) * 100 == `${[i]}000` - `${[i]}00` - 200
     ) {
       cardBox[i - 1].classList.remove("hidden");
     }
+});
+window.addEventListener("scroll", function () {
+  for (i = 0; i < cardBoxLength; i++) {}
 });
