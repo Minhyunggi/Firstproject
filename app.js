@@ -33,6 +33,3 @@ window.addEventListener("scroll", function () {
       cardBox[i - 1].classList.remove("hidden");
     }
 });
-window.addEventListener("scroll", function () {
-  for (i = 0; i < cardBoxLength; i++) {}
-});
